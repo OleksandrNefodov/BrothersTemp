@@ -1,0 +1,170 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+* {
+	box-sizing: border-box;
+}
+body, html{ 
+    height:100vh; 
+	font-family:'Raleway', sans-serif;
+    background-image: linear-gradient(black, grey);
+	text-align: center;
+}
+.logo {
+	margin: 0.2rem 0rem 0rem 1rem;
+	width: 450px;
+	float:left;
+}
+
+ul{
+	position:relative;
+}
+.brothers-nav {
+	margin-top: 1rem;
+	float: right;
+	top:0;
+	right:0;
+}
+	.brothers-nav li {
+		display: inline-block;
+		font-weight: 700;
+		padding: 2rem 5rem 2rem 3rem;	
+		margin: 2px;	
+		position:relative;
+	}
+.brothers-nav li:nth-last-child(3){
+	border-right: 1px solid white;
+}
+.brothers-nav a {
+	position: absolute;
+	top: 1.5rem;
+	text-decoration:none;
+	transition: font-size .1s;
+	color: white;
+}
+	li:focus,
+	li:hover {
+		font-weight: 900;
+		font-size: 1.2em;
+	}	
+
+.login-container {
+	width: 30%;
+	display:inline-block;
+	margin:0 auto;
+	text-align: center;
+	top: 30%;
+	left: 30%;
+	position: absolute;
+}
+
+table
+{
+    width: 100%;
+    height: 100%;
+}
+.row {
+	text-align: center;
+}
+.centered {
+    text-align: center;
+}
+p {
+    color: white;
+}
+p span {
+    font-weight: bold;
+}
+
+.footer {
+    border: 1px solid grey;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    color: white;
+    background-color: grey;
+}
+.navbar-header {
+    font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 1.75em;
+    letter-spacing: 1.2em;
+    line-height: 1.1em;
+    margin:0px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+div input {
+    margin-bottom: 10px;
+}
+
+input[type=email], input[type=password], input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    color: black;
+    background-color:lightgray;
+	display: inline;
+}
+
+
+button {
+	margin-top: 20px !important;
+    background-color: black;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    border-radius: 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+	margin-top: 20px !important;
+    background-color: grey;
+    color: black;
+}
+a .fa {
+    color: white;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+  .field-validation-error {
+      color: #b94a48;
+  }
+ 
+.field-validation-valid {
+    display: none;
+}
+ 
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+ 
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+ 
+.validation-summary-errors {
+    color: #b94a48;
+}
+ 
+.validation-summary-valid {
+    display: none;
+}
+
+

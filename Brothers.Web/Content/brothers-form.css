@@ -1,0 +1,39 @@
+﻿
+.brothers-form-container {
+
+	width: 100%;
+	overflow-y: hidden;
+	height: 100%;
+	color:white;
+	
+}
+.brothers-form-group {
+	float: right;
+	overflow-y: auto;
+	width: 100%;
+	margin:auto;
+}
+	.brothers-form-group .text-danger {
+		float: right;
+	}
+	.brothers-form-group > label {
+		float: left;
+		text-align: right;
+		padding: 2rem 1rem 0rem 0rem;
+		font-weight: bold;
+	}
+	.brothers-form-group > input {
+		float: left;
+		border-radius: 25px;
+	}
+	.brothers-form-group > button {
+		
+	}
+
+.col-25 {
+	width: 25%;
+	
+}
+.col-75 {
+	width: 75%;
+}

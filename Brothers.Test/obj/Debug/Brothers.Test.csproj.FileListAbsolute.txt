@@ -1,0 +1,12 @@
+D:\CommonDevelopment\BrothersProjects\Brothers.Test\bin\Debug\Brothers.Test.exe.config
+D:\CommonDevelopment\BrothersProjects\Brothers.Test\bin\Debug\Brothers.Test.exe
+D:\CommonDevelopment\BrothersProjects\Brothers.Test\bin\Debug\Brothers.Test.pdb
+D:\CommonDevelopment\BrothersProjects\Brothers.Test\obj\Debug\Brothers.Test.csprojResolveAssemblyReference.cache
+D:\CommonDevelopment\BrothersProjects\Brothers.Test\obj\Debug\Brothers.Test.exe
+D:\CommonDevelopment\BrothersProjects\Brothers.Test\obj\Debug\Brothers.Test.pdb
+D:\CommonDevelopment\BrothersProjects\Brothers\Brothers.Test\bin\Debug\Brothers.Test.exe.config
+D:\CommonDevelopment\BrothersProjects\Brothers\Brothers.Test\bin\Debug\Brothers.Test.exe
+D:\CommonDevelopment\BrothersProjects\Brothers\Brothers.Test\bin\Debug\Brothers.Test.pdb
+D:\CommonDevelopment\BrothersProjects\Brothers\Brothers.Test\obj\Debug\Brothers.Test.exe
+D:\CommonDevelopment\BrothersProjects\Brothers\Brothers.Test\obj\Debug\Brothers.Test.pdb
+D:\CommonDevelopment\BrothersProjects\Brothers\Brothers.Test\obj\Debug\Brothers.Test.csprojResolveAssemblyReference.cache

@@ -1,0 +1,35 @@
+﻿@using Brothers.Repository.ServiceMapping.Entities
+@model DisplayPhoto
+@{
+    ViewBag.Title = "Photos";
+}
+
+<div class="main">
+    <div style="text-align: left;"><a href="@Url.Action("AddAndEdit", "Photo")"><i class="fas fa-plus"></i></a> Add new</div>
+    <div>
+        <table class="table">
+            <tr>
+                <td>Name</td>
+                <td>Type</td>
+                <td>Size</td>
+                <td>Actions</td>
+            </tr>
+            @foreach (DisplayPhoto photo in ViewBag.Photos)
+            {
+                <tr>
+                    <td>@photo.Name</td>
+                    <td>@photo.Type</td>
+                    <td>@photo.Size</td>
+                    <td>
+                        <a href="@Url.Action("DeleteAsync", "Photo", new {id = @photo.Identifier})"><i style="color: #DDDDDD;" class="fas fa-trash"></i></a>
+                        <a href="@Url.Action("GetAsync", "Photo", new {id = @photo.Identifier})"><i style="color: #DDDDDD;" class="fas fa-edit"></i></a>
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    
+</div>

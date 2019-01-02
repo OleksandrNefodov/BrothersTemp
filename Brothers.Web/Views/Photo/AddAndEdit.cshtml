@@ -1,0 +1,95 @@
+﻿@using Brothers.Repository.ServiceMapping.Entities;
+@model DisplayPhoto
+@{
+    ViewBag.Title = "AddAndEdit";
+    string imgSrc = "";
+
+    var start = DateTime.Now;
+    if (Model.RawData != null)
+    {
+        var base64 = Convert.ToBase64String(Model.RawData);
+        imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+    }
+    var result = DateTime.Now - start;
+}
+
+@using (Html.BeginForm("Add", "Photo",  FormMethod.Post,
+    new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Add Photo</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Identifier)
+
+        <div class="container">
+            <div class="row">
+                <div class="col" style="border: black solid 1px">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-1" })
+                        <div class="col-md-5">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Size, htmlAttributes: new { @class = "control-label col-md-1" })
+                        <div class="col-md-5">
+                            @Html.EditorFor(model => model.Size, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Size, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-1" })
+                        <div class="col-md-5">
+                            @Html.DropDownListFor(photo => photo.Type, (List<SelectListItem>)ViewBag.ContentTypes, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.AlbumId, htmlAttributes: new { @class = "control-label col-md-1" })
+                        <div class="col-md-5">
+                            @Html.DropDownListFor(photo => photo.AlbumId, (List<SelectListItem>)ViewBag.Albums, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.RawData, htmlAttributes: new { @class = "control-label col-md-1" })
+                            @Html.TextBoxFor(m => m.RawData, new { type = "file" })
+                            @Html.ValidationMessageFor(m => m.RawData)
+                        </div>*@
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.RawData, htmlAttributes: new { @class = "control-label col-md-1" })
+                        <div class="col-md-5">
+                            <input type="file" name="file" />
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-1">
+                            <input type="submit" value="Save" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            
+
+                <div class="col" style="border: black solid 1px;">
+               
+                    @*<div class="display-field">
+                        @Html.DisplayFor(model => model.RawData)
+                    </div>*@
+              
+                    <div style="padding: 10px;">
+                        <img src="@imgSrc" alt="Sample Image" width="300"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

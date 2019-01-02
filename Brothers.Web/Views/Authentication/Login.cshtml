@@ -1,0 +1,42 @@
+﻿@using Brothers.Repository.ServiceMapping.Entities;
+@model AuthenticationViewBase
+
+@{
+	ViewBag.Title = "Login";	
+}
+<div class="login-container">
+
+		@using (Ajax.BeginForm("Login", "Authentication", new AuthenticationViewBase { }, new AjaxOptions
+		{
+
+		}, new { @id = "LoginForm" }))
+		{
+			
+		@Html.ValidationSummary(true)
+			<div class="brothers-form-container">
+				<h2>Login</h2>
+				<div class="brothers-form-group">
+					@Html.LabelFor(model => model.Email, htmlAttributes: new {@class = "brothers-form-control col-25"})
+					@Html.EditorFor(model => model.Email, new {htmlAttributes = new {@class = "brothers-form-control col-75", placeholder = "Email"}})
+					@Html.ValidationMessageFor(model => model.Email, "", new {htmlAttributes = new {@class = "text-danger"}})
+				</div>
+				<div class="brothers-form-group">
+					@Html.LabelFor(model => model.Password, htmlAttributes: new {@class = "brothers-form-control col-25"})
+					@Html.EditorFor(model => model.Password, new {htmlAttributes = new {@class = "brothers-form-control col-75", placeholder = "Password"}})
+					@Html.ValidationMessageFor(model => model.Password, "", new {@class = "text-danger"})
+				</div>
+				<div class="brothers-form-group">
+					<span class="psw"> <a href="/Authentication/Signup">new user?</a></span>
+				</div>
+				<div class="brothers-form-group">					
+					<button type="submit">Login</button>
+					<button type="button" class="cancelbtn" onclick="window.history.back();">Cancel</button>
+				</div>
+			</div>
+		}
+</div>
+
+
+
+
+

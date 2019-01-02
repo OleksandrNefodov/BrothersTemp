@@ -1,0 +1,44 @@
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	@Styles.Render("~/Content/css")
+</head>
+<body>
+	<header>
+		<a href="@Url.Action("Brothers", "Home")"><img class="logo" src="~/Content/img/logo_.png" alt="brothers logo" /></a>
+		<img class="logo" src="~/Content/img/logo_.png" alt="brothers logo" />
+	</header>
+	<nav>
+		<ul class="brothers-nav">
+			<li><a href="@Url.Action("Photos", "Photo")">Photos</a></li>
+			<li><a href="@Url.Action("Videos", "Video")">Videos</a></li>
+			<li><a href="@Url.Action("GetInfo", "Photo")">Info</a></li>
+			<li><a href="@Url.Action("Signup", "Authentication")"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			<li><a href="@Url.Action("Login", "Authentication")"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		</ul>
+
+		<ul id="logout" class="nav navbar-nav navbar-right" style="visibility: hidden;">
+			<li><a href="@Url.Action("Signout", "Authentication")"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+		</ul>
+	</nav>
+
+	@RenderBody()
+	<div class="footer centered">
+		<p>Copyright 2018. Website footer designed by brothers.</p>
+	</div>
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/ajax")
+	@Scripts.Render("~/bundles/jqueryval")
+	@Scripts.Render("~/bundles/Authentication")
+	@RenderSection("scripts", required: false)
+</body>
+</html>
